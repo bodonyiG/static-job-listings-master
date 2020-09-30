@@ -1,0 +1,164 @@
+body{
+  font-family: 'Spartan', sans-serif;
+  text-align: center;
+  line-height: .5rem;
+  background-color:  hsl(180, 52%, 96%);
+  font-size: 1rem;
+}
+
+h2{
+  color: hsl(180, 14%, 20%);
+  font-size: 1.3rem;
+  transition: .2s;
+}
+h2:hover{
+  color: hsl(180, 29%, 50%);
+  font-size: 1.3rem;
+}
+
+h3{
+  position: relative;
+  bottom: 10px;
+  color: hsl(180, 29%, 50%);
+  font-size: 1rem;
+
+}
+
+p span{
+  color: hsl(180, 29%, 50%);
+  font-size: .8rem;
+}
+
+hr{
+  width:0;
+  height: 0;
+}
+
+.header{
+  content: url(images/bg-header-desktop.svg);
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  background-color: hsl(180, 29%, 50%);
+  z-index: -1;
+}
+
+
+
+.main-container{
+  width: 80%;
+  height:1000px;
+  margin: auto;
+  margin-top: 100px;
+
+}
+
+.item-bg{
+  position: relative;
+  width: 100%;
+  box-shadow: 0 0 50px grey;
+  background-color: white;
+  border-radius: 3px;
+  text-align: left;
+  border-left: solid;
+  border-color: hsl(180, 29%, 50%);
+  border-width: 0;
+  padding: 20px;
+  transition: .2s;
+  right:20px;
+}
+
+.item-bg:hover{
+  border-width: 5px;
+  transition: .2s;
+}
+
+.avatar{
+  display: inline;
+  left:0;
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+
+.text-block-1{
+  display: inline-block;
+}
+
+.text-block-2{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.tag{
+  font-size: .7rem;
+  font-weight: bold;
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px;
+  padding: 6px;
+  color: hsl(180, 29%, 50%);
+  transition: .5s;
+  margin-right: 5px;
+}
+.tag:hover{
+  color:  hsl(180, 31%, 95%);
+  background-color: hsl(180, 29%, 50%);
+
+}
+
+.round-tag{
+  font-size: .7rem;
+  font-weight: bold;
+  background-color: hsl(180, 29%, 50%);
+  border-radius: 12px;
+  padding: 6px 6px 4px 6px;
+  color: hsl(180, 31%, 95%);
+  transition: .5s;
+  margin-right: 5px;
+}
+
+
+
+@media (max-width:1040px){
+  .item-bg{
+    padding-top: 30px;
+  }
+  .header{
+    content: url(images/bg-header-mobile.svg);
+  }
+  .avatar{
+    position: absolute;
+    width: 60px;
+    left:15px;
+    top:-40px;
+  }
+  .text-block-1{
+    display: inline;
+  }
+  .text-block-2{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left:0;
+    margin-top: 20px;
+  }
+  hr{
+    border-style: none;
+    width: 100%;
+    height: 0;
+    border-top: solid 1px hsl(180, 29%, 50%);
+    position: relative;
+    top: 5px;
+  }
+
+}
+
+
+
+
+/* Original selectors  --------------------------------------------------*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
