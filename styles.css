@@ -31,6 +31,10 @@ hr{
   display: none;
 }
 
+#filterBar{
+  display: none;
+}
+
 .header{
   content: url(images/bg-header-desktop.svg);
   position: absolute;
@@ -76,7 +80,6 @@ hr{
   position: relative;
   top: 10px;
   margin-right: 10px;
-  margin-top: auto;
 }
 
 .text-block-1{
@@ -95,19 +98,18 @@ hr{
   font-weight: bold;
   background-color: hsl(180, 31%, 95%);
   border-radius: 5px;
-  padding: 6px;
-  transition: .5s;
+  padding: 8px 6px 6px;
+  transition: .3s;
   margin-right: 5px;
+  cursor: default;
 }
 .tag-on{
   color:  hsl(180, 31%, 95%);
   background-color: hsl(180, 29%, 50%);
 }
 .tag:hover{
-
   font-size: .9rem;
 }
-
 .round-tag{
   font-size: .7rem;
   font-weight: bold;
@@ -117,6 +119,31 @@ hr{
   color: hsl(180, 31%, 95%);
   transition: .5s;
   margin-right: 5px;
+}
+
+.filter{
+  margin: 0;
+  background-color:  hsl(180, 31%, 95%);
+  display: inline-block;
+  padding:10px;
+  margin-bottom: 10px;
+  border-radius: 5px 0 0 5px;
+  margin-right: 0;
+}
+.close{
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  right: 5px;
+  cursor: default;
+  transition: .3s;
+}
+.close:hover{
+  background-color: hsl(180, 8%, 52%);
 }
 
 /* Small size----------------------------------------------------- */
@@ -145,14 +172,19 @@ hr{
     margin-top: 20px;
   }
   hr{
+    margin: 0;
     display: block;
     border-style: none;
     width: 100%;
     height: 0;
     border-top: solid 1px hsl(180, 29%, 50%);
     position: relative;
-    top: 5px;
+    top: 15px;
     opacity: .5;
+  }
+  .tag{
+    display: inline-block;
+    margin-top: 20px;
   }
 
 }
