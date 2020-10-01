@@ -56,7 +56,7 @@ hr{
 .item-bg{
   position: relative;
   width: 100%;
-  box-shadow: 0 0 50px grey;
+  box-shadow: 0 0 50px rgba(1,1,1,.2);
   background-color: white;
   border-radius: 3px;
   text-align: left;
