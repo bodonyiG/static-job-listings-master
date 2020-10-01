@@ -9,17 +9,20 @@ $(".tag").on("click", function() {
     //Ha még nem szerepel, hozzáadja az aktív filterekhez
     if (selectedFilters.includes(txt) === false) {
       selectedFilters.push(txt);
-      addFilter(txt);
     }
 
     //Turns on all same other tags
+    addFilter(txt);
     addTags(txt);
+    filterPosts();
 
   } else {
     //Turns off all same other tags
     removeTags(txt);
     removeFilter(txt);
+    filterPosts();
   }
+
 
 
 });
@@ -47,6 +50,7 @@ function addFilter(filterName) {
     let tx = $(this).attr("name");
     removeFilter(tx);
     removeTags(tx);
+    filterPosts();
   });
   chechkFilters();
 }
@@ -72,7 +76,41 @@ function removeTags(tagName){
   $(".tag").each(function(index, value) {
     if ($(this).text() === tagName) {
       $(this).removeClass("tag-on");
-
     }
+  });
+}
+
+function filterPosts(){
+
+  $(".item-bg ").not("#filterBar").each(function(index, value){
+    if(selectedFilters.length > 0){
+      //ha már van aktív filter
+      let tagsOfItem = $(this).attr("data-tags");
+      let visible = [];
+      for(i=0; i<selectedFilters.length; i++){
+        if(tagsOfItem.includes(selectedFilters[i])){
+          visible.push(true);
+        }else{
+          visible.push(false);
+        }
+      }
+      if(visible.includes(false)){
+        $(this)[0].style.display = "none";
+      }else{
+        $(this)[0].style.display = "block";
+      }
+    }else{
+      //Ha nincs aktív filter
+      $(this)[0].style.display = "block";
+    }
+
+
+    // if(tagsOfItem.includes(selectedFilters)){
+    //   $(this)[0].style.display = "block";
+    // }else{
+    //   $(this)[0].style.display = "none";
+    // }
+
+
   });
 }
