@@ -1,5 +1,10 @@
 var selectedFilters = [];
 
+selectedFilters = ["Frontend", "Senior", "HTML", "CSS", "JavaScript"];
+chechkFilters();
+selectedFilters.forEach((item, i) => {
+  addFilter(item);
+});
 
 
 $(".tag").on("click", function() {
@@ -40,7 +45,7 @@ function chechkFilters() {
 
 //Sets the current filters to filter bar
 function addFilter(filterName) {
-  let filterBar = $("#filterBar");
+  let filterBar = $("#filterContainer");
   let content = filterBar.html();
   content += '<p class="filter" name=' + filterName + '>' + filterName + '</p>';
   content += '<span class="close" name=' + filterName + '>x</span>'

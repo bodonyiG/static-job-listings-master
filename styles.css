@@ -144,7 +144,27 @@ hr{
 }
 .close:hover{
   background-color: hsl(180, 8%, 52%);
+
 }
+
+
+#filterContainer{
+  max-width: 85%;
+  display: inline-block;
+
+}
+#filterContainer p{
+  margin: 5px 0 5px 0;
+}
+.clear{
+  position: absolute;
+  top:48%;
+  right:20px;
+}
+.clear:hover{
+  text-decoration: line-through;
+}
+
 
 /* Small size----------------------------------------------------- */
 
@@ -185,6 +205,9 @@ hr{
   .tag{
     display: inline-block;
     margin-top: 20px;
+  }
+  .clear{
+
   }
 
 }
