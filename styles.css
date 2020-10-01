@@ -11,7 +11,7 @@ h2{
   color: hsl(180, 14%, 20%);
   font-size: 1.3rem;
   transition: .2s;
-  line-height: 20px;
+  line-height: 30px;
 }
 h2:hover{
   color: hsl(180, 29%, 50%);
